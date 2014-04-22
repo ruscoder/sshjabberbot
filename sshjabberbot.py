@@ -61,10 +61,11 @@ def init_factory():
                     else:
                         answer = handle(command)
 
-            msg = domish.Element(("jabber:client", "message"))
-            msg["to"] = message["from"]
-            msg.addElement("body", content=answer)
-            xmlstream.send(msg)
+            if answer and message["from"] != message["to"]:
+                msg = domish.Element(("jabber:client", "message"))
+                msg["to"] = message["from"]
+                msg.addElement("body", content=answer)
+                xmlstream.send(msg)
 
         xmlstream.addObserver('/message',  gotMessage)
 

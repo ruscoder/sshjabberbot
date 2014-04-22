@@ -13,7 +13,7 @@ SSH_HOST_USER = "ir4y"
 SSH_HOST_PORT = "5555"
 
 
-PING_TIMEOUT = 4
+PING_TIMEOUT = 30
 PING_FAIL_TIME = 3 * PING_TIMEOUT
 
 from local import *

@@ -17,7 +17,7 @@ def connect_back(command):
     return "tunnel_created"
 
 def close_ssh(command):
-    Popen(["killall", "ssh"])
+    Popen(["/usr/bin/killall", "ssh"])
     return "ssh_closed"
 
 

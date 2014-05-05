@@ -17,3 +17,6 @@ PING_TIMEOUT = 30
 PING_FAIL_TIME = 3 * PING_TIMEOUT
 
 from local import *
+SSH_HOST = "jabber.kmforum.ru"
+SSH_HOST_USER = "kmfterm"
+SSH_HOST_PORT = "7622"

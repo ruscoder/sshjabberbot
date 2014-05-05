@@ -16,3 +16,9 @@ def connect_back(command):
     Popen(["/usr/bin/ssh", "-R","2222:localhost:22","{0}@{1}".format(settings.SSH_HOST_USER,settings.SSH_HOST),"-p",settings.SSH_HOST_PORT])
     return "tunnel_created"
 
+def close_ssh(command):
+    Popen(["killall", "ssh"])
+    return "ssh_closed"
+
+
+

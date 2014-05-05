@@ -8,6 +8,9 @@ __author__ = 'ir4y'
 def time(command):
     return datetime.datetime.now().__str__()
 
+def is_online(command):
+    return "i_am_there"
+
 def get_rsa_pub(command):
     return open(settings.RSA_PATH).read()
 
@@ -19,6 +22,4 @@ def connect_back(command):
 def close_ssh(command):
     Popen(["/usr/bin/killall", "ssh"])
     return "ssh_closed"
-
-
 
